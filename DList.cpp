@@ -196,6 +196,12 @@ public:
      
 	void ReverseDList()
 	{
+		//考虑他没有节点和一个节点
+		assert(_head != NULL);
+		if (_head&&_head->_next == NULL)
+		{
+			return;
+		}
 		Node* p1 = _head;
 		Node* p2 = _tail;
 		//考虑奇数个和偶数个的时候，基数的时候hui错开，偶数时候不会相等
